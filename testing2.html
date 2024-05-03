@@ -37,6 +37,8 @@
 	</div>
 	
 	<script>
+
+		import * as THREE from "./libs/three.js/build/three.module.js"
 	
 		window.viewer = new Potree.Viewer(document.getElementById("potree_render_area"));
 		
@@ -69,6 +71,15 @@
 			material.activeAttributeName = "rgba";
 			
 			scene.addPointCloud(pointcloud);
+
+			{ // DISTANCE MEASURE
+				let measure = new Potree.Measure();
+				measure.closed = false;
+				measure.addMarker(new THREE.Vector3(34.455, 4.338, 10.221));
+				measure.addMarker(new THREE.Vector3(36.443, 8.711, 8.171));
+				
+				scene.addMeasurement(measure);
+			}
 			
 			viewer.fitToScreen();
 		});

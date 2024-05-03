@@ -27,7 +27,7 @@
 	<script src="./build/potree/potree.js"></script>
 	<script src="./libs/potree/potree.js"></script>
 	<script src="./libs/plasio/js/laslaz.js"></script>
-	<script src="./libs/three.js/build/three.js"></script>
+	<script src="./libs/three.js/build/three.module.js"></script>
 	
 	<!-- INCLUDE ADDITIONAL DEPENDENCIES HERE -->
 	<!-- INCLUDE SETTINGS HERE -->
@@ -66,8 +66,8 @@
 			let material = pointcloud.material;
 			material.size = 1;
 			material.pointSizeType = Potree.PointSizeType.ADAPTIVE;
-			material.shape = Potree.PointShape.SQUARE;
-			material.activeAttributeName = "rgba";
+			// material.shape = Potree.PointShape.SQUARE;
+			// material.activeAttributeName = "rgba";
 			
 			scene.addPointCloud(pointcloud);
 			

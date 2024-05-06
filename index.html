@@ -21,7 +21,7 @@
         width: 90%;
         height: 100%;
     };
-    .hidden {
+    iframe.hidden {
         display: none;
     }
     </style>
@@ -37,9 +37,8 @@
 <script>
     const links = document.querySelectorAll('h2');
     const iframes = document.querySelectorAll('iframe');
-    console.log(links);
-    console.log(iframes);
-    links.forEach(link, ()=> {
+
+    links.forEach(function (link) {
         console.log(link);
     })
 </script>

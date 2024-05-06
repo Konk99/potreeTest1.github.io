@@ -17,7 +17,9 @@
         cursor: pointer;
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
         box-sizing: border-box;
     }
 
@@ -45,14 +47,16 @@
     const iframes = document.querySelectorAll('iframe');
 
     links.forEach(function (link) {
-        let correctFrame = document.querySelector('iframe[id="' + link.id + '"]');
+        link.addEventListener('click', () => {
+            let correctFrame = document.querySelector('iframe[id="' + link.id + '"]');
 
-        iframes.forEach(function (iframe) {
-            if(iframe == correctFrame){
-                iframe.classList.remove('hidden');
-            }else {
-                iframe.classList.add('hidden');
-            }
+            iframes.forEach(function (iframe) {
+                if (iframe == correctFrame) {
+                    iframe.classList.remove('hidden');
+                } else {
+                    iframe.classList.add('hidden');
+                }
+            })
         })
     })
 </script>

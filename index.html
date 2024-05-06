@@ -39,7 +39,8 @@
     const iframes = document.querySelectorAll('iframe');
 
     links.forEach(function (link) {
-        console.log(link);
+        let correctFrame = document.querySelector('iframe[id=' + link.id + ']');
+        console.log(correctFrame);
     })
 </script>
 </html>

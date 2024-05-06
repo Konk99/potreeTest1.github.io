@@ -47,6 +47,10 @@
     .hidden {
         display: none;
     }
+
+    button {
+        opacity: 0;
+    }
 </style>
 
 <body>
@@ -57,7 +61,7 @@
     <iframe id="1" class="hidden" src="./testing.html" frameborder="0"></iframe>
     <iframe id="2" class="hidden" src="./testing2.html" frameborder="0"></iframe>
     <iframe id="3" class="hidden" src="./testing3.html" frameborder="0"></iframe>
-    <button id="testButton" class="hidden"></button>
+    <button id="testButton"></button>
 </body>
 <script>
     const links = document.querySelectorAll('h2');

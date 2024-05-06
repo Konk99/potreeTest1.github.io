@@ -69,6 +69,7 @@
             iframes.forEach(function (iframe) {
                 if (iframe == correctFrame) {
                     iframe.classList.remove('hidden');
+                    iframe.focus();
                 } else {
                     iframe.classList.add('hidden');
                 }

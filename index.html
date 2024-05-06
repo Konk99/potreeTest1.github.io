@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +11,26 @@
         margin: 0px;
         height: 100vh;
         overflow-x: hidden;
-    };
-    body > h2 {
+    }
+
+    body>h2 {
         cursor: pointer;
     }
-        *, *::before, *::after {
+
+    *, *::before, *::after {
         box-sizing: border-box;
-    };
+    }
+
     iframe {
         width: 90%;
         height: 100%;
-    };
-    iframe.hidden {
+    }
+
+    .hidden {
         display: none;
     }
-    </style>
+</style>
+
 <body>
     <h1>Test website</h1>
     <h2 id="1">First Model</h2>
@@ -39,8 +45,16 @@
     const iframes = document.querySelectorAll('iframe');
 
     links.forEach(function (link) {
-        let correctFrame = document.querySelector('iframe[id=' + link.id + ']');
-        console.log(correctFrame);
+        let correctFrame = document.querySelector('iframe[id="' + link.id + '"]');
+
+        iframes.forEach(function (iframe) {
+            if(iframe == correctFrame){
+                iframe.classList.remove('hidden');
+            }else {
+                iframe.classList.add('hidden');
+            }
+        })
     })
 </script>
+
 </html>

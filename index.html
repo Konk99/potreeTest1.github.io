@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hub</title>
-    <style>body {
+</head>
+<style>
+    body {
         margin: 0px;
         height: 100vh;
         overflow-x: hidden;
@@ -23,18 +25,20 @@
         display: none;
     }
     </style>
-</head>
 <body>
     <h1>Test website</h1>
     <h2 id="1">First Model</h2>
     <h2 id="2">Second Model</h2>
     <h2 id="3">Third Model</h2>
-    <iframe class="hidden" src="./testing.html" frameborder="0"></iframe>
+    <iframe id="1" class="hidden" src="./testing.html" frameborder="0"></iframe>
+    <iframe id="2" class="hidden" src="./testing2.html" frameborder="0"></iframe>
+    <iframe id="3" class="hidden" src="./testing3.html" frameborder="0"></iframe>
 </body>
 <script>
     const links = document.querySelectorAll('h2');
     const iframes = document.querySelectorAll('iframe');
-
+    console.log(links);
+    console.log(iframes);
     links.forEach(link, ()=> {
         console.log(link);
     })

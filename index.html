@@ -12,14 +12,16 @@
         height: 100vh;
         overflow-x: hidden;
         background-color: gainsboro;
+        display: flex;
+        flex-direction: row;
     }
 
-    body>h1 {
+    body div h1 {
         margin: auto;
         width: 200px;
     }
 
-    body>h2 {
+    body div h2 {
         cursor: pointer;
         width: 200px;
         display: block;
@@ -30,8 +32,14 @@
         margin: 10px auto;
     }
 
-    body>h2:hover {
+    body div h2:hover {
         background-color: green;
+    }
+
+    body > div > div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25vw;
     }
 
     *,
@@ -55,10 +63,14 @@
 </style>
 
 <body>
-    <h1>Test website</h1>
-    <h2 id="1">First Model</h2>
-    <h2 id="2">Second Model</h2>
-    <h2 id="3">Third Model</h2>
+    <div>
+        <h1>Test website</h1>
+        <div>
+            <h2 id="1">First Model</h2>
+            <h2 id="2">Second Model</h2>
+            <h2 id="3">Third Model</h2>
+        </div>
+    </div>
     <iframe id="1" class="hidden" src="./testing.html" frameborder="0"></iframe>
     <iframe id="2" class="hidden" src="./testing2.html" frameborder="0"></iframe>
     <iframe id="3" class="hidden" src="./testing3.html" frameborder="0"></iframe>
